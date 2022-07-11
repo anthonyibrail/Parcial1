@@ -22,5 +22,12 @@ body {
 }
 
 footer {
+    display: flex;
+    justify-content: end;
     margin-top: 50px;
+}
+
+.elcontenedor {
+    display: flex;
+    flex-direction: column-reverse;
 }
