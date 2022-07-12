@@ -12,6 +12,16 @@
 
         Realiza todo lo anterior al hacer click en el botón. 
         */
+/*let btn_1 = document.getElementById("btn_mayusculas").addEventListener("click",converterToLow)
+
+function converterToLow(e) {
+    e.preventDefault();
+    let text = document.getElementsByTagName("txt_may").value.split(",")
+    let arreglo=[];  
+    text.map(element => {arreglo.push(element.toLowerCase());} )
+    document.getElementById("txt_may").innerText = arreglo.join(",")
+}*/
+
 
 
       /*
@@ -25,6 +35,13 @@
            Deberás convertir el string a Entero. 
     
     */
+let btn_2 = document.getElementById("btn_añoshumano").addEventListener("click",calculateDogAge)
+
+function calculateDogAge(e){
+    e.preventDefault()
+    let aHumano = parseInt(document.getElementById("edad_humano").value)
+    let aPerro = document.getElementById("edad_perro").value = aHumano*7
+}
 
 
 
@@ -45,3 +62,27 @@
        Registra un evento de "click", para que cuando se de click en el botón, se muestren las propiedades de cada objeto en el input correspondiente. 
 
      */
+function Pokemon(nombre,especie,ataque,defensa){
+    this.nombre = nombre
+    this.especie = especie
+    this.ataque = ataque
+    this.defensa = defensa
+}
+
+let pokemon1 = new Pokemon('Mewtwo','Psíquico',110,90)
+let pokemon2 = new Pokemon('Blastoise','Agua',83,100)
+
+let btn_3 = document.getElementById("btn_muestra").addEventListener("click",muestraPokemon)
+
+function muestraPokemon(e){
+    e.preventDefault()
+    document.getElementById("nombre_poke1").value = pokemon1.nombre 
+    document.getElementById("especie_poke1").value = pokemon1.especie
+    document.getElementById("ataque_poke1").value = pokemon1.ataque
+    document.getElementById("defensa_poke1").value = pokemon1.defensa
+
+    document.getElementById("nombre_poke2").value = pokemon2.nombre 
+    document.getElementById("especie_poke2").value = pokemon2.especie
+    document.getElementById("ataque_poke2").value = pokemon2.ataque
+    document.getElementById("defensa_poke2").value = pokemon2.defensa
+}
