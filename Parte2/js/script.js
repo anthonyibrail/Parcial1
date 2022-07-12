@@ -12,15 +12,15 @@
 
         Realiza todo lo anterior al hacer click en el botón. 
         */
-/*let btn_1 = document.getElementById("btn_mayusculas").addEventListener("click",converterToLow)
+let btn_1 = document.getElementById("btn_mayusculas").addEventListener("click",converterToLow)
+let text = document.getElementById("txt_may").value.split(",")
 
 function converterToLow(e) {
     e.preventDefault();
-    let text = document.getElementsByTagName("txt_may").value.split(",")
-    let arreglo=[];  
-    text.map(element => {arreglo.push(element.toLowerCase());} )
-    document.getElementById("txt_may").innerText = arreglo.join(",")
-}*/
+    let arreglo = [];  
+    text.map(element => {arreglo.push(element.toLowerCase());})
+    let minusculas = document.getElementById("txt_may").innerText = arreglo
+}
 
 
 
